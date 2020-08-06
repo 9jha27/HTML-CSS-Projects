@@ -1,0 +1,16 @@
+h1 {text-align: center;}
+		body {
+			font-family: "Verdana";
+		}
+		p {
+			text-align: left;
+		}
+		.font_1 {
+			font-family: "Verdana";
+			color: coral;
+			text-align: center;
+		}
+		.font_2 {
+			font: bold;
+			color: CadetBlue;
+		}

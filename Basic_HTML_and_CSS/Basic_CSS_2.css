@@ -1,0 +1,12 @@
+h1 {
+	text-align: center;
+	color: salmon;
+	text-shadow: 4px 4px 8px LightGrey;
+}
+
+p {
+	color: DarkCyan;
+	background: Gainsboro;
+	font-family: Verdana;
+	text-align: center;
+}

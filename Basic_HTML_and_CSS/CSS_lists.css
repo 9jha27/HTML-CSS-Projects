@@ -1,0 +1,23 @@
+head {
+	font-family: Verdana;
+	color: salmon;
+	text-align: center;
+	font-style: bold;
+}
+body{
+	font-family: Verdana;
+	background-color: honeydew;
+	color: Grey;
+	list-style-position: center;
+}
+
+ol{
+	font-family: Verdana;
+	list-style-type: upper-roman;
+	background-color: honeydew;
+	color: Grey
+}
+
+ul{
+	list-style-type: square;
+}
