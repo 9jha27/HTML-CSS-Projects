@@ -1,3 +1,4 @@
+
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 62.50;
@@ -112,7 +113,6 @@ section {
 
 .clearfix::after,
 .container::after,
-.photo-container::after,
 .navbar::after {
     clear: both;
     display: table;
@@ -149,7 +149,7 @@ section {
     width: auto;
     display: block;
     height: auto;
-    padding-top: 0px;
+    padding-top: 500px;
     padding-bottom: 400px;
     color: #fff;
 }
@@ -189,6 +189,7 @@ section {
     display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
     padding: 10px;
     border-radius: 8px;
     margin: 0px auto;
@@ -280,7 +281,7 @@ section {
 }
 
 .terms {
-    margin: 39px 1px 0 0;
+    margin: 30px 1px 0 0;
     padding-left: 52px;
     font-size: 14px;
     line-height: 5px;
