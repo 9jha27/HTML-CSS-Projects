@@ -1,0 +1,156 @@
+body {
+    font-family: monospace;
+    font-size: 1.2em;
+    color: coral;
+    text-align: center;
+}
+
+h1 {
+    border-style: double;
+    border-color: darkseagreen;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+p:hover {
+    background-color: darkseagreen;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.navbar {
+    text-align:center;
+    background-color: white;
+    font-style: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.navbar a{
+    color: coral;
+}
+
+.navbar a:hover {
+    background: cadetblue;
+    color: white;
+}
+
+video {
+    margin-left: auto;
+    margin-right: auto;
+    filter: saturate(58%);
+    border-radius: 25px;
+    width:75%;
+    height: 75%;
+}
+
+.top-left {
+    position: relative;
+    top: 20px;
+    left: 16px;
+    margin-left: 40%;
+    margin-right: auto;
+    font-weight: bold;
+} 
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    filter: saturate(58%);
+    border-radius: 25px;
+}
+
+img:hover {
+    opacity: 0.3;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+
+.center {
+    display: block;
+    max-width: 50%;
+    max-height: 50%;
+}
+.bottom-right{
+    position: relative;
+    bottom: 20px;
+    right: 16px;
+    margin-left: 40%;
+    margin-right: auto;
+    font-weight: bold;
+} 
+
+
+
+
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 1.3em;
+    border-style: solid;
+    border-color: coral;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    background-color: honeydew;
+}
+
+
+
+
+
+.column {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 0px 5px;
+    margin-top: 10px;
+    margin-left: 15%;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+h5 {
+    font-size: 1.5em;
+    border-style:solid;
+    margin: 20px;
+    background-color: honeydew;
+}
+.ul {
+    list-style-type: circle;
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color:coral;
+    border-width: 2px;
+    padding: 8px;
+    height: 160px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
