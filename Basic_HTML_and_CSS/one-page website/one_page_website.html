@@ -3,31 +3,31 @@
 	<head>
 		<title>Laura Ha</title>
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./js/one_page_website.js" defer></script>
 	</head>
 	<body>
 	
 	<!--NAV-->
-		<div>
-			<ul>
-				<a href="#about" id="link"><li>About</li></a>
-				<a href="#philosophy" id="link"><li>Teaching Philosophy</li></a>
-				<a href="#schedule" id="link"><li>Schedule</li></a>
-				<a href="#media" id="link"><li>Media</li></a>
-				<a href="#contact" id="link"><li>Contact</li></a>
-			</ul>
+		<div class="topnav">
+				<a href="#about" id="link">About</a>
+				<a href="#philosophy" id="link">Teaching Philosophy</a>
+				<a href="#schedule" id="link">Schedule</a>
+				<a href="#media" id="link">Media</a>
+				<a href="#contact" id="link">Contact</a>
+		</div>
 	<!--ENDNAV-->
 
 	<!--HOME-->
 			<div>
 				<div>
-					<span>Laura Ha - Violinist</span>
+					<h1>Laura Ha - Violinist</h1>
 				</div>
 			</div>
 		<!--END HOME-->
 		
 		<!--ABOUT-->
 		<section>
-			<div id="about">
+			<div class="container" id="about">
 				<h1>About</h1>
 				<div>
 					<summary>
@@ -42,25 +42,27 @@
 		
 		<!--PHILOSOPHY-->
 		<section>
-			<div id="philosophy">
-				<h1>Philosophy</h1>
-				<div>
-					<summary>
-						My greatest joy in teaching is creating a positive environment where a student can freely explore
-						their musical values and ideas. Much too often, I find that students have a difficult time
-						connecting with their teachers, which can intimidate their creative minds. I have dedicated
-						myself for nearly a decade to understanding my students’ needs, both mentally and physically, to
-						help them excel.
+			<div class="container">
+				<div id="philosophy">
+					<h1>Philosophy</h1>
+					<div>
+						<summary>
+							My greatest joy in teaching is creating a positive environment where a student can freely explore
+							their musical values and ideas. Much too often, I find that students have a difficult time
+							connecting with their teachers, which can intimidate their creative minds. I have dedicated
+							myself for nearly a decade to understanding my students’ needs, both mentally and physically, to
+							help them excel.
 
-						In addition, I have a deep understanding of different cultural values which has immeasurable
-						assistance in determining what style of teaching fits more with different students. Ranging from
-						students in Colombia who are part of the conservatory in Medellin to group classes at an all
-						girls’ charter school in Cleveland, OH where attendees were primarily African-American; I am
-						highly adaptable in teaching effectively across different cultures. Growing up in a strong,
-						traditional Asian family, these teaching experiences have only expanded my understanding of
-						cultural differences amongst a beautifully diverse group of students striving for musical
-						experiences.
-					</summary>
+							In addition, I have a deep understanding of different cultural values which has immeasurable
+							assistance in determining what style of teaching fits more with different students. Ranging from
+							students in Colombia who are part of the conservatory in Medellin to group classes at an all
+							girls’ charter school in Cleveland, OH where attendees were primarily African-American; I am
+							highly adaptable in teaching effectively across different cultures. Growing up in a strong,
+							traditional Asian family, these teaching experiences have only expanded my understanding of
+							cultural differences amongst a beautifully diverse group of students striving for musical
+							experiences.
+						</summary>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -68,68 +70,95 @@
 		
 		<!--SCHEDULE-->
 		<section>
-			<div id="schedule">
-				<h2>Upcoming Performances</h2>
-				<div>
-					<ul>
-						<li>8/27/2020 - Park Concert @ 8pm</li>
-						<li>9/12/2020 - Paganini Marathon @ 8pm</li>
-					</ul>
+			<div class="container">
+				<div id="schedule">
+					<h1>Upcoming Performances</h1>
+					<div>
+						<ul>
+							<li>8/27/2020 - Park Concert @ 8pm</li>
+							<li>9/12/2020 - Paganini Marathon @ 8pm</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
 		<!-- END SCHEDULE-->
-		
-		<!--MEDIA-->
-		<section>
-			<h2>Media</h2>
-			<!--PHOTO-CONTAINER 1-->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./thumb/headshot.jpg" alt="Old headshot">
-							<div class="photo-overlay">
-								<h3 class="white-head">Click to Enlarge</h3>
-								<p>Laura Ha</p>
-							</div>
-						</div>
-					</div>
-					
-			<!--END PHOTO-CONTAINER 1-->
-			
-			<!--PHOTO-CONTAINER 2-->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./thumb/stgeorge.jpg" alt="bouldering">
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Nature</p>
-							</div>
-						</div>
-					</div>
-					
-			<!--END PHOTO-CONTAINER 2-->		
-			
-				
-			<!--PHOTO-CONTAINER 9-->
-					<div class="video-container">
-						<div class="photo">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/zbW3BhsEiUA" frameborder="0" 
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<div class="photo-overlay">
-								<h3>Click to Enlarge</h3>
-								<p>Piazzola</p>
-							</div>
-						</div>
-					</div>
-					
-					<!--END PHOTO-CONTAINER 9-->
+
+		<!-- IMAGE LIGHTBOX -->
+			<h1>Images</h1>
+		<div class="col-container" id="media"></div>
+			<div class="col">
+				<img src="./thumb/headshotThumb.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="col">
+				<img src="./thumb/stgeorge.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="col">
+				<img src="./thumb/headshot2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="col">
+				<img src="./thumb/photo3.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
 	
-		</section>
-		<!--END MEDIA-->
+		</div>
+
+		<!-- The Modal/Lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+				<div class="mySlides">
+					<div class="numbertext">1/4</div>
+					<img src="./thumb/headshotThumb.png" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2/4</div>
+					<img src="./thumb/stgeorge.png" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3/4</div>
+					<img src="./thumb/headshot2.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4/4</div>
+					<img src="./thumb/photo3.jpg" style="width:100%">
+				</div>
+
+				<!--Next/previous controls-->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!--Caption text-->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!--Thumbnail image controls-->
+				<div class="col">
+					<img class="demo" src="./thumb/headshotThumb.png" onclick="currentSlide(1)" alt="Laura Ha">
+				</div>
+				<div class="col">
+					<img class="demo" src="./thumb/stgeorge.png" onclick="currentSlide(2)" alt="St George">
+				</div>
+				<div class="col">
+					<img class="demo" src="./thumb/headshot2.jpg" onclick="currentSlide(3)" alt="Baby Laura">
+				</div>
+
+				<div class="col">
+					<img class="demo" src="./thumb/photo3.jpg" onclick="currentSlide(4)" alt="Soldier's Tale">
+				</div>
+
+			</div>
+
+		</div>
+
+		
 		
 		<!--CONTACT-->
 		<section>	
-			<div id="contact">
+			<div id="contact" class="container">
 				<div>
 					<h1>Contact</h1>
 					<div>
