@@ -71,7 +71,7 @@
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
                         <img src="./images/photo1.jpg" style="width:100%">
-                    <div class="text">Clean, Simplistic Style</div>
+                    <div class="text">Clean Approach</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -107,15 +107,16 @@
         </div>
 
         <div class="Column_2">
-            <a href="https://github.com/9jha27" target="_blank"><img src="./images/github.png" alt="GitHub"></a>
+            <a href="https://github.com/9jha27" target="_blank"><img src="./images/Github.jpg" alt="GitHub"></a>
         </div>
     </div>
 
 <!-- Pop-up contact form -->
 <button class="open-button" id = 'Contact' onclick="openForm()">Contact Laura</button>
 
-<div class="form-popup" id="myForm" onsubmit='return validateForm()' method='post'>
+<div class="form-popup" id="myForm" method='post'>
     <form action="/action_page.php" class="form-container">
+
         <h1 style="color: black;">Contact Me</h1>
         <label for="email">Name:</label>
             <input type="text" name="name" placeholder='Please enter your name here' required>
@@ -123,9 +124,9 @@
             <input type="text" id="email" name="email" placeholder="Please enter your email here" required>
         <label for="message">Message:</label>
             <input type="text" id="Message" name="Message" placeholder="Leave me a message!">
-        
+
     
-        <button type="submit" class="btn send" id='sendbtn' onclick="loadDoc()">Submit</button>
+        <button type="submit" class="btn send" id='sendbtn' onclick="location.href='thank_you.html';">Submit</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
 </div>

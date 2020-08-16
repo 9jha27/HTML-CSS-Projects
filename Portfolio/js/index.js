@@ -2,18 +2,6 @@ function openForm() {
     document.getElementById("myForm").style.display = "block";
 }
 
-function validateForm() {
-  var x = document.forms["myForm"]["name"].value;
-  var y = document.forms["myForm"]["email"].value;
-  if (x == "") {
-    alert("Please fill in your name.");
-    return false;
-  }
-  if (y == "") {
-    alert("Please fill in your email.");
-    return false;
-  }
-}
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
@@ -50,15 +38,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-//AJAX
-var ajax = new XMLHttpRequest();
-ajax.open('GET', 'submit.html');
-ajax.onreadystatechange = function() {
-    if (ajax.readyState == 4) {
-        document.getElementById('myForm').innerHTML = ajax.responseText;
-    }
-}
-function loadDoc() {
-    ajax.send();
-    document.getElementById('sendbtn').style.display = 'none';
+//REDIRECT
+function redirect() {
+   window.open("http://laura-ha.com/thank_you.html");
 } 
