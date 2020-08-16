@@ -1,7 +1,12 @@
+html {
+	scroll-behavior: smooth;
+}
+
 /* Body */
 body {
-	margin: 0%; 
+	margin: 0%;
 }
+
 
 .center {
     text-align: center;
@@ -15,7 +20,22 @@ body {
 	top: 0; 
 	width: 100%; 
 	z-index: 1; 
+	opacity: 1;
+	transition: 3s none;
+	-webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 5s;
 }
+
+@keyframes moveNav {
+	from {left: -100vw;}
+	to {left: 0vw;}
+  }
+
+@keyframes movevideoText {
+from {top: -100vw;}
+to {top: 0px;}
+}
+
 
 /* Navbar text */
 .Navbar a {
@@ -34,6 +54,8 @@ body {
 	background-color: #F4F4F4; 
 	color: black; 
 	font-weight: bold; 
+	opacity: 0.6;
+  	transition: 0.7s;
 }
 
 /* Navbar home button */
@@ -42,23 +64,37 @@ body {
 }
 
 /* Video */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
 #nature_video {
 	position: fixed; 
 	right: 0; 
 	bottom: 0; 
 	min-width: 100%; 
 	z-index: -1;
+	animation: zoominoutsinglefeatured 5s;
 }
 
-/* Text over the video */ 
+/* Text over the video */
+
 .Video_Text { 
 	background: rgba(0, 0, 0, 0.5); 
 	color: white; 
 	width: 100%;
 	padding: 20px;
 	margin-top: 23%;
+	position: relative;
+	-webkit-animation: moveNav 4s;
+	animation: movevideoText 4s;
 }
 
+/* Column Sizing */
 
 * { 
 	box-sizing: border-box; 
@@ -66,29 +102,22 @@ body {
 .Column_1 {
 	float: left;  
 	width: 50%; 
-	padding: 10px; 
+	padding: 1.6%; 
 	padding-top: 3%; 
-	height: 400px; 
+	height: 448px; 
 	background-color: honeydew; 
+	position: relative;
 }
 
 .Column_2 {
 	float: left;
 	width: 50%;
-	padding: 10px;
-	padding-top: 1.9%;
-	height: 400px;
+	padding: 1.6%;
+	height: 448px;
 	background-color: #4d4d4d;
+	position: relative;
 }
 
-.Column_3 {
-	float: left;
-	width: 50%;
-	padding: 10px;
-	padding-top: 3.5%;
-	height: 450px;
-	background-color: #4d4d4d;
-}
 
 .Row:after { 
 	content: ""; 
@@ -96,13 +125,117 @@ body {
 	clear: both; 
 }
 
+/*SLIDESHOW*/
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 600px;
+	position: relative;
+	margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+	display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+	font-family: 'Courier New', Courier, monospace;
+	color: darkseagreen;
+	font-size: 1vw;
+	font-weight: bold;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+
 /* Heading 1 elements */
 h1 {
 	text-transform: uppercase;
 	font-family: 'Courier New', Courier, monospace; 
 	text-align: center;
 	margin-top: 3%; 
-	color: #1a1a1a;
+	color: white;
+	letter-spacing: .2vw;
+}
+
+h2 {
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	margin-top: 1%;
 }
 
 /* Paragraph elements */
@@ -147,52 +280,80 @@ img {
 	display: block;	
 }
 
-/* Contact form */
-input[type=text] { 
+/* Pop-Up Contact form */
+
+/*Open Button*/
+.open-button {
+	background-color: lightslategray;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 23px;
+	right: 28px;
+	width: 280px;
+	-webkit-animation: movePopup 5s;
+	animation: movePopup 5s;
+}
+
+@keyframes movePopup {
+	from {right: -40vw;}
+	to {bottom: 1.75vw;}
+  }
+  
+.form-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid black;
+	z-index: 9;
+}
+
+.form-container {
+	max-width: 300px;
+	padding: 10px;
+	background-color: honeydew;
+}
+
+.form-container input[type=text] { 
 	width: 100%;
-	padding: 12px;
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical; 
+	padding: 15px;
+    border: none;
+    margin-top: 6px 0 22px 0;
     font-family: 'Courier New', Courier, monospace; 
 }
 
 /* Submit button */
-input[type=submit] { 
-	background-color: black;
+.form-container .btn { 
+	background-color: #4d4d4d;
 	color: white;
 	font-weight: bold;
 	padding: 12px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	display: block;
-	margin-left: auto;
-	margin-right: auto; 
+	width: 100%;
 	font-family: 'Courier New', Courier, monospace;
+	margin-bottom: 10px;
+	opacity: 0.8;
 }
 
-/* Hover effect for submit button */
-input[type=submit]:hover {
-	background-color: white; 
-	color: black; 
-	font-weight: bold; 
-	transform: scale(1.5); 
-	transition: transform 1.5s; 
+.form-container .btn:hover {
+	opacity: 1;
 }
 
-/* Form elememt */
-form { 
-    border-radius: 5px; 
-    border-style: solid;
-    border-color: #4d4d4d;
-	background-color: honeydew;
-	padding: 10px;
-	font-family: 'Courier New', Courier, monospace;
+/* Hover effect for send button */
+.form-container .send {
+	background-color: lightslategray;
+	color: white;
+	border: 2px black;
+
 }
+
 
 
 /* Paragraph element hover effect */
